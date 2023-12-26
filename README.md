@@ -25,8 +25,6 @@ We have starter code in this repository to work on the given task. If you run th
 - Implement caching to avoid unnecessary API requests for the same username within a short time span (local storage can be used).
 
 
-# Run the Project
-
 ## Prerequisites
 
 ### Node.js and npm:
