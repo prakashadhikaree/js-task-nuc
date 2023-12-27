@@ -4,27 +4,6 @@ We have starter code in this repository to work on the given task. If you run th
 
 ![Alt text](image.png)
 
-## Task Requirements
-
-- Implement the functionality to fetch and display information about a GitHub user based on the username entered in the input field.
-- Display at least the user's `avatar`, `username`, `number of followers`, and `number of public repositories` in a proper card.
-- Handle cases where the entered username does not exist or when there is an error fetching the data.
-- Provide appropriate error messages or notifications.
-- Use the GitHub API (https://api.github.com) for fetching user data.
-- Implement loading indicators to show that data is being fetched.
-
-## Notes
-
-- You can modify the HTML and CSS as needed to achieve the desired functionality.
-- Make sure to handle asynchronous operations appropriately using promises, async/await, or callbacks.
-- Consider using the fetch API or other methods for making HTTP requests.
-
-## Bonus
-
-- Implement a feature to display a list of the user's repositories.
-- Implement caching to avoid unnecessary API requests for the same username within a short time span (local storage can be used).
-
-
 ## Prerequisites
 
 ### Node.js and npm:
