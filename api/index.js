@@ -1,6 +1,7 @@
 import { Octokit } from "https://esm.sh/@octokit/core";
 
-const baseUrl = "https://api.github.com";
+const baseUrl = import.meta.env.VITE_BASE_URL;
+const token = import.meta.env.VITE_GITHUB_TOKEN;
 
 const options = {
   headers: {
@@ -45,15 +46,14 @@ export const getUserRepos = async (userName, cache) => {
 };
 
 //setting up access token for functional follow button
-//Note: token expires after 30days. Expires on Sun, Jan 28 2024.
 const octokit = new Octokit({
-  auth: `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`,
+  auth: token,
 });
 
 export const getUserContributions = async (userName, cache) => {
   try {
     const headers = {
-      Authorization: `bearer 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`,
+      Authorization: `bearer ${token}`,
     };
     const body = {
       query: `query {
