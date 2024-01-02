@@ -1,3 +1,4 @@
+# GitHub User Search
 ## Task Details
 
 We have starter code in this repository to work on the given task. If you run the project, you can see the following starter demo.
