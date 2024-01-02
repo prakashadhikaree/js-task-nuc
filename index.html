@@ -1,20 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>ITONICS</title>
-    </head>
-    <body>
-        <div id="app">
-            <h1>GitHub User Search</h1>
-            <input type="text" id="username-input" placeholder="Enter GitHub username" />
-            <button class="search-button">Search</button>
 
-            <div id="user-info">
-                <!-- User information will be displayed here dynamically -->
-            </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&display=swap" rel="stylesheet" />
+  <title>ITONICS</title>
+</head>
+
+<body>
+  <main id="app">
+    <div class="container">
+      <section>
+        <h2 class="header">GitHub User Search</h2>
+        <!-- divider -->
+        <div class="dividerContainer">
+          <div class="divider"></div>
         </div>
-        <script type="module" src="/main.js"></script>
-    </body>
+
+        <form class="search-section">
+          <input type="text" id="username-input" placeholder="Enter GitHub username" />
+          <button type="submit" class="search-button">Search</button>
+        </form>
+      </section>
+
+      <section id="user-info">
+        <!-- User information will be displayed here dynamically -->
+
+        <!-- avatar -->
+        <div class="items-center">
+          <div class="avatarContainer" id="avatar-container">
+            <img
+              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="profile-image" class="profile-image" />
+            <h3 id="user-name" class="medium-text">User Name</h3>
+          </div>
+          <div class='spinnerButton'>
+            <div class='btnSpinner'></div>
+            <button id="toogle-follow-status" type="button" class='followBtn'></button>
+          </div>
+        </div>
+
+        <div class="info-container">
+          <h2 class="header" id="followers">23</h2>
+          <h4 class="sub-text">Followers</h4>
+        </div>
+        <div class="info-container">
+          <h2 class="header" id="following">23</h2>
+          <h4 class="sub-text">Following</h4>
+        </div>
+        <div class="info-container">
+          <h2 class="header" id="repo">23</h2>
+          <h4 class="sub-text">Public Repositories</h4>
+        </div>
+
+        <div class="repo-list-container">
+          <h3 class="header">Repositories</h3>
+          <ul class="repos-list"></ul>
+        </div>
+      </section>
+
+      <h4 class="initial-message">
+        Please enter username and search github user...
+      </h4>
+      <div class="spinner"></div>
+      <div class="error">
+        <p class="errorText"></p>
+      </div>
+    </div>
+
+    <section class="main-contribution-Continer">
+      <h3 id="total-contribution" class="subText"></h3>
+      <div class="user-contribution-info">
+
+        <div class="contribute-sub-container">
+
+          <div class='flex'>
+            <div class="weeks-container">
+              <p class="text-small">Mon</p>
+              <p class="text-small">Wed</p>
+              <p class="text-small">Fri</p>
+            </div>
+            <div class='months-contribution-container'>
+              <div class="months-container">
+                <p class="text-small">Jan</p>
+                <p class="text-small">Feb</p>
+                <p class="text-small">Mar</p>
+                <p class="text-small">Apr</p>
+                <p class="text-small">May</p>
+                <p class="text-small">Jun</p>
+                <p class="text-small">Jul</p>
+                <p class="text-small">Aug</p>
+                <p class="text-small">Sep</p>
+                <p class="text-small">Oct</p>
+                <p class="text-small">Nov</p>
+                <p class="text-small">Dec</p>
+              </div>
+              <div class="contribution-container"></div>
+            </div>
+          </div>
+
+          <div class='contribution-container-footer'>
+            <a href='https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/managing-contribution-settings-on-your-profile/why-are-my-contributions-not-showing-up-on-my-profile'
+              class="text-small link" target="_blank">
+              Learn how we count contributions
+            </a>
+            <div class='color-info'>
+              <p class="text-small">Less</p>
+              <p class="color"></p>
+              <p class="color"></p>
+              <p class="color"></p>
+              <p class="color"></p>
+              <p class="color"></p>
+              <p class="text-small">More</p>
+            </div>
+          </div>
+
+        </div>
+    </section>
+  </main>
+
+  <script type="module" src="/main.js"></script>
+</body>
+
 </html>
